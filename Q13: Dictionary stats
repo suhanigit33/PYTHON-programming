@@ -1,0 +1,2 @@
+d={'a':90,'b':80}
+print(max(d,key=d.get), sum(d.values())/len(d))
