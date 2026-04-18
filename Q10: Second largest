@@ -1,0 +1,3 @@
+l=[1,5,3,9]
+l=sorted(set(l))
+print(l[-2])
