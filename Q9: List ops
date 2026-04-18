@@ -1,0 +1,1 @@
+l=[1,2]; l.append(3); l.remove(2); print(l)
