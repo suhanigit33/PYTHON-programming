@@ -1,0 +1,3 @@
+with open("test.txt") as f:
+    data=''.join([c for c in f.read() if not c.isdigit()])
+with open("out.txt","w") as f: f.write(data)
