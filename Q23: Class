@@ -1,0 +1,4 @@
+class Bank:
+    def __init__(self,b): self.b=b
+    def deposit(self,x): self.b+=x
+    def show(self): print(self.b)
