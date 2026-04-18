@@ -1,0 +1,6 @@
+
+while True:
+    print("1.Add 2.Exit")
+    ch=int(input())
+    if ch==1: print("Add")
+    else: break
