@@ -26,9 +26,10 @@ def print_table(rows: list, columns: list, title: str = ""):
     if title:
         print(f"\n  {title}")
 
-    widths = [max(len(str(col)),
-                  max((len(str(row[i])) for row in rows), default=0))
-              for i, col in enumerate(columns)]
+    widths = [len(str(col)) for col in columns] # Initialize with header widths
+for row in rows:
+    for i, v in enumerate(row):
+        widths[i] = max(widths[i], len(str(v)))
 
     sep    = "  +" + "+".join("-" * (w + 2) for w in widths) + "+"
     header = "  |" + "|".join(f" {col:<{widths[i]}} " for i, col in enumerate(columns)) + "|"
